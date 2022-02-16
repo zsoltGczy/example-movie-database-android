@@ -2,4 +2,5 @@
     <string name="app_name">Example Movie Database</string>
 
     <string name="movie_list_search_hint">Search</string>
+    <string name="movie_list_movie_list_item_image">Movie list item image</string>
 </resources>
