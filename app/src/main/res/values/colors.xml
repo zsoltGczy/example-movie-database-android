@@ -10,4 +10,6 @@
     <color name="secondaryTextColor">#FFFFFF</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="movieListCardViewRippleColor">@color/cardview_shadow_start_color</color>
 </resources>

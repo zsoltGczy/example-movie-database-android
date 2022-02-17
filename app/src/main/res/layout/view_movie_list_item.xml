@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:padding="@dimen/margin_padding_size_small"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        app:rippleColor="@color/movieListCardViewRippleColor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/movieImageView"
+                android:layout_width="@dimen/margin_padding_size_use_constraints"
+                android:layout_height="@dimen/margin_padding_size_use_constraints"
+                android:layout_margin="@dimen/margin_padding_size_small"
+                android:contentDescription="@string/movie_list_movie_list_item_image"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/test_movie_image" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <TextView
+                android:id="@+id/movieTitleTextView"
+                style="@style/MovieListItemTitle"
+                android:layout_width="@dimen/margin_padding_size_use_constraints"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_padding_size_medium"
+                android:minLines="2"
+                app:layout_constraintBottom_toTopOf="@+id/releaseDateTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Doctor Strange in the Multiverse of Madness" />
+
+            <TextView
+                android:id="@+id/releaseDateTextView"
+                style="@style/MovieListItemSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_padding_size_medium"
+                android:layout_marginBottom="@dimen/margin_padding_size_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/movieTitleTextView"
+                tools:text="1989" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</merge>
