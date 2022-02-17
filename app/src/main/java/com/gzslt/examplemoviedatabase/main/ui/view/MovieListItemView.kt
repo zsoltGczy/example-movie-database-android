@@ -40,7 +40,7 @@ class MovieListItemView :
     override fun bind(model: MovieListItemUiModel) {
         with(binding) {
             // TODO use model.imageUrl
-            movieImageView.load(R.drawable.test_movie_image) {
+            movieImageView.load(R.drawable.test_movie_poster_image) {
                 crossfade(true)
             }
             movieTitleTextView.text = model.title
